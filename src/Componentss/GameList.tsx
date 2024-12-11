@@ -29,8 +29,8 @@ const GameList: React.FC<GameListProps> = ({ selectedGenre, searchText }) => {
   const fetchGames = async (genreSlug?: string, searchText?: string) => {
     setLoading(true);
 
-    const baseUrl = import.meta.env.VITE_BASE_URL || "";
-    const apiKey = import.meta.env.VITE_API_KEY || "";
+    const baseUrl = import.meta.env.VITE_BASE_URL;
+    const apiKey = import.meta.env.VITE_API_KEY;
 
     if (!baseUrl || !apiKey) {
       setError("Configuration error: Missing API key or base URL.");

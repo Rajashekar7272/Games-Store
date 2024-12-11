@@ -21,8 +21,8 @@ const GameGenres: React.FC<GameGenresProps> = ({ onGenreClick }) => {
   const fetchGenres = async () => {
     setLoading(true);
 
-    const baseUrl = import.meta.env.VITE_BASE_URL || "";
-    const apiKey = import.meta.env.VITE_API_KEY || "";
+    const baseUrl = import.meta.env.VITE_BASE_URL;
+    const apiKey = import.meta.env.VITE_API_KEY;
 
     if (!baseUrl || !apiKey) {
       setError("Configuration error: Missing API key or base URL.");
